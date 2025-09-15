@@ -93,8 +93,8 @@ function updateOutput(totalPrice, tipPerPerson) {
   }
 
   errorHideUpdate();
-  outputForTipAmount.textContent = tipPerPerson;
-  outputForTotalAmount.textContent = totalPrice;
+  outputForTipAmount.textContent = `\$${tipPerPerson}`;
+  outputForTotalAmount.textContent = `\$${totalPrice}`;
   resetButtonToggle();
 }
 
