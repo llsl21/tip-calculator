@@ -1,44 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  Bill
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="visually-hidden">Tip Calculator App</h1>
+      <div class="logo-wrapper">
+        <img src="/images/logo.svg" alt="" />
+      </div>
+    </header>
+    <main class="calculator">
+      <div class="calculator__input">
+        <form action="#" class="calculator__form">
+          <div class="calculator__form-group">
+            <label for="bill" class="calculator__label">Bill</label>
+            <input
+              type="number"
+              id="bill"
+              class="calculator__input-field focus-ring"
+              placeholder="0"
+              min="0"
+            />
+          </div>
+          <div class="calculator__form-group">
+            <p class="calculator__label">Select Tip %</p>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <div class="calculator__tip-options">
+              <button type="button" class="calculator__tip-option focus-ring">
+                5%
+              </button>
+              <button type="button" class="calculator__tip-option focus-ring">
+                10%
+              </button>
+              <button type="button" class="calculator__tip-option focus-ring">
+                15%
+              </button>
+              <button type="button" class="calculator__tip-option focus-ring">
+                25%
+              </button>
+              <button type="button" class="calculator__tip-option focus-ring">
+                50%
+              </button>
+              <input
+                type="number"
+                id="custom-tip"
+                class="calculator__input-field calculator__input-field--custom focus-ring"
+                placeholder="Custom"
+                min="0"
+              />
+            </div>
+          </div>
+          <div class="calculator__form-group">
+            <div class="calculator__label-error-group">
+              <label for="people" class="calculator__label"
+                >Number of People</label
+              >
+              <p class="calculator__error-message" hidden></p>
+            </div>
+            <input
+              type="number"
+              id="people"
+              class="calculator__input-field focus-ring"
+              placeholder="0"
+              min="0"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="calculator__output">
+        <div class="calculator__output-groups">
+          <div class="calculator__output-group">
+            <div class="calculator__output-info">
+              <p class="calculator__output-label">Tip Amount</p>
+              <p class="calculator__output-sublabel">/ person</p>
+            </div>
+            <p class="calculator__output-value" id="tip-amount"></p>
+          </div>
+          <div class="calculator__output-group">
+            <div class="calculator__output-info">
+              <p class="calculator__output-label">Total</p>
+              <p class="calculator__output-sublabel">/ person</p>
+            </div>
+            <p class="calculator__output-value" id="total-amount"></p>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="calculator__reset-button"
+          id="reset-button"
+          disabled
+        >
+          RESET
+        </button>
+      </div>
+    </main>
+  </body>
 </html>
