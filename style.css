@@ -53,6 +53,12 @@
   padding: 0;
 }
 
+input,
+button {
+  -webkit-appearance: none; /* Safari / iOS 独自 */
+  appearance: none;
+}
+
 #custom-tip::-webkit-inner-spin-button,
 #custom-tip::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -135,7 +141,7 @@ input {
 }
 
 .focus-ring {
-  outline: transparent auto 1px;
+  /* outline: transparent auto 1px; */
   transition: outline 0.5s;
   &:focus,
   &:focus-visible {
